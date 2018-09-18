@@ -1,0 +1,38 @@
+.link {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid $primary;
+  background-color: $accent;
+  padding: 5px 8px;
+  color: white;  
+  text-transform: uppercase;
+  text-decoration: none;  
+  cursor: pointer;  
+  border-radius: 3px;
+}
+
+.button:disabled {
+  background-color: darken($font-light-gray, 10%);
+  border: 1px solid darken($font-light-gray, 10%);
+  color: darken($font-gray, 25%);
+}
+
+button:active {
+  outline: 0;  
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.filterSkills {
+  padding: 3px 5px;
+  color: $font-color;
+  position: absolute;
+  right: 15px;
+}

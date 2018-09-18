@@ -1,0 +1,31 @@
+.form {
+  padding: 30px 0;
+  margin: 0 auto;
+  width: 80%;
+  
+  @include from(l) {
+    width: 50%;
+  }
+  .label {
+    display: block;
+    color: $font-light-gray;
+    padding: 5px 0;
+    @include fontBody;
+  }
+
+  .input {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    color: $font-color;
+    padding: 7px 10px;
+  }
+
+  textarea {
+    @include fontBody;
+  }
+  
+  .button {
+    margin: 30px 0 0 0;
+  }
+}

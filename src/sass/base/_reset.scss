@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, html {    
+    min-height: 100%;
+}
+
+body {
+    margin: 0;    
+    font-family: sans-serif;
+    height: 100%;
+    @include fontBody;       
+}
+
+a {
+    outline: 0;
+}

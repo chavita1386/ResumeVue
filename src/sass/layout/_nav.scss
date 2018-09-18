@@ -1,0 +1,53 @@
+.nav-container {
+    background-color: white;    
+    width: 100%;    
+    overflow: hidden;       
+    box-shadow: -4px 5px 3px rgba($font-color, .6); 
+    position: relative;
+    z-index: 5000;   
+    
+    @include from(l) {
+        width: 30%;
+        max-width: 350px;
+        max-height: 740px;
+        border-radius: 6px;
+    }
+    
+}
+
+.nav-mobile {
+    width: 100%;
+    border-top: 1.5px solid darken($font-gray, 30%);
+    
+    z-index: 6000;
+    height: 50px;
+    min-height: 50px;    
+    max-height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;        
+    transform : translate3d(0, 0, 0), translate(0);
+    
+    position: fixed; 
+    left: 0;
+    bottom: 0;
+
+    // &::before {
+    //     content: 'contact';
+    //     @include fontCaption;
+    //     display: block;
+    //     position: absolute;
+    //     width: 55px;
+    //     height: 55px;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     border-radius: 50%;
+    //     border: 1px solid $font-gray;
+    // }
+
+    @include from(l) {
+        display: none;
+    }
+}

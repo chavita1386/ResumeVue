@@ -1,0 +1,26 @@
+// Colores
+$primary: #0F3057;
+$secondary: #316376;
+$accent: #008891;
+$white: #e7e7de;
+$complementary: #E7E7DE;
+
+$font-color: #333;
+$font-gray: #C4C4C4;
+$font-light-gray: #E5E5E5;
+$font-white: #F1F1F1;
+
+$linkedin: #0077B5;
+$twitter: #1DA1F2;
+$github: #9D47AA;
+// Breakpoints
+$breakpoints : (
+    s  : 0,
+    m  : 640px,
+    l  : 1024px,
+    xl : 1440px
+  ) !default;
+
+// Fracciones para calcular anchos de los items
+  $fractions : 3 6 !default;
+

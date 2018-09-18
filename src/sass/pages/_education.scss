@@ -1,0 +1,104 @@
+.education {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px; 
+  @include from(l) {
+    padding-bottom: 5px;  
+  } 
+  
+  &-courses {
+    width: 100%;
+    @include from(l) {
+      width: 60%;     
+    }
+  }  
+
+  &-skills {
+    width: 100%;
+    @include from(l) {      
+      width: 40%;    
+    }
+  }
+
+  &__course {
+    margin: 20px 0;
+    padding: 0 0 15px 25px;
+    position:relative;
+
+    
+    &::after{
+      content: '';      
+      display: block;
+      width: 80%;
+      height: 1.5px;
+      border: 0 solid red;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to right,$complementary, transparent);
+    }    
+  }
+
+  &__title {    
+    margin: 0;
+    padding: 0;    
+    font-weight: 500;
+    font-size: .9rem;
+    line-height: .9rem;
+    color: $font-white;     
+  }
+
+  &__school {    
+    margin: 8px 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: .9rem;
+    line-height: .9rem;    
+    text-transform: uppercase;
+    color: $font-light-gray;
+  }
+
+  &__time {
+    @include fontCaption;
+    margin: 0;
+    padding: 0;
+    color: $font-gray;
+  }
+
+}
+
+.skill {
+  width: 100%;
+  padding: 0 15px;
+
+  &__name {
+    @include fontBody;
+    margin: 8px 0;    
+    color: $font-light-gray;    
+  }
+
+  &__percentage {
+    border: 0px solid red;
+    background: $font-white;
+    border-radius: 8px;
+    height: 16px;
+
+    &::before {
+      content: '';
+      display: block;      
+      height: 100%;
+      border-radius:  8px;
+      background: $accent;
+      box-shadow: 4px 0px 3px rgba($font-color, .5);
+    }    
+  }
+
+  
+  @for $i from 5 to 100 {
+    .percentage-#{$i} {        
+      &::before {
+        width: $i*1%;
+      }
+    }
+  }  
+}

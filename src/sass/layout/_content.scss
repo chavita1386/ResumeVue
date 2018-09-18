@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  background: $font-color;
+  margin-bottom: 50px;
+  @include from(l) {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 9px;
+    width: 60%;
+    max-width: 785px;
+    border-radius: 0 9px 9px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
