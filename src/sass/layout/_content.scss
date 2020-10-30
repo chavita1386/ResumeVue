@@ -1,8 +1,11 @@
 .container {
   width: 100%;
   overflow-x: hidden;
-  background: $font-color;
+  background: $font-white;
+  color: $font-color;
   margin-bottom: 50px;
+  padding: 0 10px;
+  // box-shadow: 2px -2px 5px 2px rgba($white, 1);
   @include from(l) {
     margin-bottom: 30px;
     margin-top: 15px;
@@ -12,5 +15,9 @@
     border-radius: 0 9px 9px 0;
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .right .button {
+    margin-right: 1rem;
   }
 }

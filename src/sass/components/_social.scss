@@ -13,6 +13,7 @@
     border-radius: 50%;
     height: 25px;
     width: auto;
+    opacity: 0.7;
     @include from(l) {
       height: 30px;
     }

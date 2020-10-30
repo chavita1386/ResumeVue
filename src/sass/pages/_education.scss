@@ -1,33 +1,38 @@
 .education {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
   @include from(l) {
-    padding-bottom: 5px;  
-  } 
-  
+    padding-bottom: 5px;
+  }
+
   &-courses {
     width: 100%;
     @include from(l) {
-      width: 60%;     
+      width: 60%;
     }
-  }  
+  }
 
   &-skills {
     width: 100%;
-    @include from(l) {      
-      width: 40%;    
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include from(l) {
+      width: 40%;
     }
   }
 
   &__course {
     margin: 20px 0;
     padding: 0 0 15px 25px;
-    position:relative;
+    position: relative;
 
-    
-    &::after{
-      content: '';      
+    &::after {
+      content: '';
       display: block;
       width: 80%;
       height: 1.5px;
@@ -35,27 +40,27 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      background-image: linear-gradient(to right,$complementary, transparent);
-    }    
+      background-image: linear-gradient(to right, $complementary, transparent);
+    }
   }
 
-  &__title {    
+  &__title {
     margin: 0;
-    padding: 0;    
+    padding: 0;
     font-weight: 500;
-    font-size: .9rem;
-    line-height: .9rem;
-    color: $font-white;     
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+    color: $font-color;
   }
 
-  &__school {    
+  &__school {
     margin: 8px 0;
     padding: 0;
     font-weight: normal;
-    font-size: .9rem;
-    line-height: .9rem;    
+    font-size: 0.9rem;
+    line-height: 0.9rem;
     text-transform: uppercase;
-    color: $font-light-gray;
+    color: $font-gray;
   }
 
   &__time {
@@ -64,7 +69,6 @@
     padding: 0;
     color: $font-gray;
   }
-
 }
 
 .skill {
@@ -72,33 +76,30 @@
   padding: 0 15px;
 
   &__name {
-    @include fontBody;
-    margin: 8px 0;    
-    color: $font-light-gray;    
+    margin: 8px 0;
+    color: $font-color;
   }
 
   &__percentage {
     border: 0px solid red;
-    background: $font-white;
+    background: $font-light-gray;
     border-radius: 8px;
     height: 16px;
 
     &::before {
       content: '';
-      display: block;      
+      display: block;
       height: 100%;
-      border-radius:  8px;
-      background: $accent;
-      box-shadow: 4px 0px 3px rgba($font-color, .5);
-    }    
+      border-radius: 8px;
+      background: $secondary;
+    }
   }
 
-  
   @for $i from 5 to 100 {
-    .percentage-#{$i} {        
+    .percentage-#{$i} {
       &::before {
-        width: $i*1%;
+        width: $i * 1%;
       }
     }
-  }  
+  }
 }

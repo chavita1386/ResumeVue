@@ -6,14 +6,23 @@
 
 .button {
   display: inline-block;
-  border: 1px solid $primary;
   background-color: $accent;
+  border: none;
   padding: 5px 8px;
-  color: white;  
+  color: white;
   text-transform: uppercase;
-  text-decoration: none;  
-  cursor: pointer;  
-  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.button-link {
+  border: none;
+  background: none;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  color: $accent;
 }
 
 .button:disabled {
@@ -23,7 +32,7 @@
 }
 
 button:active {
-  outline: 0;  
+  outline: 0;
 }
 
 button::-moz-focus-inner {

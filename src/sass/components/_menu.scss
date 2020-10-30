@@ -1,7 +1,7 @@
 .menu {
   display: none;
   list-style-type: none;
-  margin: 0;
+  margin: 50px 0;
   padding: 0;
 
   @include from(m) {
@@ -18,15 +18,15 @@
     @include fontMenu;
 
     &:hover {
+      text-decoration: none;
       color: $accent;
-      font-weight: 500;
     }
   }
 }
 
 .router-link-active {
   color: $secondary;
-	font-weight: bold;
+  font-weight: bold;
 
   &:hover {
     color: $secondary;
@@ -34,31 +34,31 @@
   }
 }
 
-.menu-mobile__item {	
-	text-align: center;
-	width: 25%;	
-	transform : translate3d(0, 0, 0);
+.menu-mobile__item {
+  text-align: center;
+  width: 25%;
+  transform: translate3d(0, 0, 0);
 }
 
 .menu-mobile__link {
-	text-decoration: none;
-	color: $font-color;
-	display: flex;
-	align-content: center;
-	align-items: center;
-  flex-wrap: wrap;  
+  text-decoration: none;
+  color: $font-color;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .menu-mobile__icon {
-	height: 24px;
-	width: auto;
-	fill: white;
-	width: 100%;
+  height: 24px;
+  width: auto;
+  fill: white;
+  width: 100%;
 }
 
 .menu-mobile__title {
-	@include fontExtraSmall;
-	display: block;
-	margin: 2px 0;
-	width:100%;
+  @include fontExtraSmall;
+  display: block;
+  margin: 2px 0;
+  width: 100%;
 }

@@ -1,68 +1,75 @@
 .experience {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
-  color: $font-light-gray;    
-  
+  margin-bottom: 20px;
+  color: $font-color;
+
   &__info {
     width: 30%;
     padding: 0 15px 0 0;
     position: relative;
-    
-    &::before{
+
+    &::before {
       content: '';
       width: 2px;
-      display: block;
+      display: none;
       height: 100%;
       position: absolute;
       right: 0;
       border: 0 solid red;
-      background-image: linear-gradient(to top,$complementary, transparent);
+      background-image: linear-gradient(to top, $complementary, transparent);
     }
-  }  
-  
+  }
+
   &__date {
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 0 0 5px 0;
     text-align: right;
     position: relative;
-
-    &::after{
-      content: '';      
-      display: block;
-      width: 80%;
-      height: 1.5px;
-      border: 0 solid red;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-image: linear-gradient(to left,$complementary, transparent);
-    }
-  }
-  
-  &__month {
-    margin: 0 5px;
+    color: darken($font-gray, 30);
     @include fontCaption;
   }
 
-  &__job {
-    padding: 5px 0 0 0;
+  &__month {
+    margin: 0 5px;
   }
-  
+
+  &__job {
+    padding: 5px 0;
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 80%;
+      min-height: 1.5px;
+      height: 1.5px;
+      max-height: 1.5px;
+      border: 0px solid red;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to left, $complementary, transparent);
+    }
+  }
+
   &__job,
   &__company {
     text-align: right;
     margin: 0;
   }
-  
+
   &__company {
     margin: 0;
     padding: 0;
     @include fontCaption;
   }
-  
+
   &__desc {
     width: 70%;
-    padding: 0 0 0 15px;
+    font-size: 0.9rem;
+    padding: 5px 20px 0 20px;
   }
 }

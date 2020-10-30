@@ -22,7 +22,7 @@
   &::before {
     z-index: 0;
     background: transparent url('./assets/bg-pattern.png') repeat;
-    opacity: .2;
+    opacity: 0.15;
     background-size: 70%;
   }
   &::after {
@@ -48,27 +48,55 @@
     }
   }
   &__job {
-    color: $font-gray;
+    color: $font-light-gray;
     @include fontMenu;
     @include from(l) {
       @include fontSubTitle;
     }
   }
-  &__photo {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+
+  &__logo {
+    border: 1px solid red;
+    position: relative;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin: 5px auto 0 auto;
-    display: block;
-    @include from(l) {
-      width: 120px;
-      height: 120px;
-      margin: 20px auto 0 auto;
-      border: 4px solid white;
-      position: relative;
-      z-index: 100;
-      object-fit: cover;
+    position: relative;
+    border: 4px solid white;
+    margin: 15px auto 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $font-light-gray;
+
+    &:hover {
+      .profile__photo {
+        top: -120%;
+      }
+      .profile__character {
+        bottom: -15px;
+      }
     }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 15px;
+    background-color: $font-light-gray;
+    transition: top 0.3s ease;
+    @include from(l) {
+    }
+  }
+  &__character {
+    position: absolute;
+    padding: 25px 0 0 0;
+    background-color: $font-light-gray;
+    bottom: -130%;
+    width: 110%;
+    height: auto;
+    transition: bottom 0.3s ease;
   }
 }
